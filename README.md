@@ -15,21 +15,36 @@ Demo
 
 Usage Guide
 
-Upload your CSV
-Must contain at least:
-date (converted to datetime)
-treatment (1 if product is in price-change group, 0 if control)
-post (1 if date >= intervention date, 0 if before)
-quantity_sold (or your main outcome)
-Choose Outcome Variable
-Select “quantity_sold” or “revenue” (or any numeric column) as the dependent variable.
-Interpret the Results
-The app runs a Difference-in-Differences model and displays each coefficient in plain language.
+1. Upload your CSV
+
+2. Must contain at least:
+
+    date (converted to datetime)
+
+    treatment (1 if product is in price-change group, 0 if control)
+    
+    post (1 if date >= intervention date, 0 if before)
+    
+    quantity_sold (or your main outcome)
+
+3. Choose Outcome Variable
+
+    Select “quantity_sold” or “revenue” (or any numeric column) as the dependent variable.
+
+4. Interpret the Results
+
+    The app runs a Difference-in-Differences model and displays each coefficient in plain language.
+
 Key metric is treatment:post:
-Positive → The treatment group’s outcome increases more than the control (net effect).
-Negative → The treatment group’s outcome decreases more than the control, suggesting the price change might have hurt sales.
+
+  Positive → The treatment group’s outcome increases more than the control (net effect).
+
+  Negative → The treatment group’s outcome decreases more than the control, suggesting the price change might have hurt sales.
+
 Check Parallel Trends
-The app plots average pre‐treatment outcomes for both groups.
+
+  The app plots average pre‐treatment outcomes for both groups.
+
 If lines are roughly parallel before the price change, the DiD approach is more valid.
 Project Structure
 
